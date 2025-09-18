@@ -1,5 +1,5 @@
 function Searchbook() {
-    const API = "AIzaSyDJIQOGvuN5bMVvQQtsKxnialRIzAYVyOg"
+    const API = ""
     const Livro = window.document.getElementById("searchbook").value.trim()
     const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(Livro)}&key=${API}`
 
@@ -43,7 +43,7 @@ function Searchbook() {
 }
 
 function Searchauthor() {
-    const API = "AIzaSyDJIQOGvuN5bMVvQQtsKxnialRIzAYVyOg"
+    const API = ""
     const Autor = window.document.getElementById("searchauthor").value.trim()
     const url = `https://www.googleapis.com/books/v1/volumes?q=inauthor:${encodeURIComponent(Autor)}&key=${API}`
 
