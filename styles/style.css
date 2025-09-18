@@ -1,51 +1,110 @@
 * {
-    padding: 0;
-    margin: 0;
-    color: #FFFFFF;
+    box-sizing: border-box;
 }
 
 body {
     background-image: linear-gradient(180deg, #0D082D, #1C125B);
     background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    margin: 0;
+    min-height: 90vh;
+    color: white;
 }
 
 header {
-    width: full;
+    width: 100%;
     height: 3rem;
     display: flex;
-    justify-content: space-between;
     background-color: #4B4869;
+    align-items: center;
+    padding-left: 10px;
+    box-shadow: 0px 8px 20px #000000;
+    border-radius: 2px;
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.Searchs{
+    width: 100%;
+    height: 4em;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-header>div {
-    display: flex;
-    width: 25em;
-    justify-content: space-between;
-}
-
-header>div>input{
-    width: 78%;
+.Searchs>.Livro>input {
+    width: 20em;
     height: 2em;
     border: none;
     border-radius: 5px;
     color: #000000;
 }
 
-header>div>button {
+.Searchs>.Livro>button{
     background-color: #E1604F;
     border: none;
     border-radius: 5px;
     height: 2em;
-    width: 20%;
+    width: 8em;
     cursor: pointer;
 }
 
-main{
+.Searchs>.Autor>input{
+    width: 20em;
+    height: 2em;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+}
+
+.Searchs>.Autor>button{
+    background-color: #E1604F;
+    border: none;
+    border-radius: 5px;
+    height: 2em;
+    width: 8em;
+    cursor: pointer;
+}
+
+#results{
     width: 100%;
     height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.book-card {
+    background-color: #2C2542;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20em;
+    height: 25em;
+}
+
+.info1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 13em;
+    width: 100%;
+    padding: 3px;
+}
+
+.book-card p.description{
+    width: 100%;
+    height: 10em;
+    overflow-y: auto;
 }
